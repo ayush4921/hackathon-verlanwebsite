@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Verlan</title>
+      <meta charset="UTF-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+      <link rel="stylesheet" href="../static/fonts/font-awesome.min.css">
+      <link rel="stylesheet" href="../static/fonts/ionicons.min.css">
+      <link rel="stylesheet" href="../static/css/styles.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="../static/assets/css/main.css" />
+      <link rel="stylesheet" href="../static/stat_for_grid/style.css">
+
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      
+      <noscript>
+         <link rel="stylesheet" href="../static/assets/css/noscript.css" />
+      </noscript>
+   </head>
+   <body class="is-preload" style="background-color:salmon;color: whitesmoke;">
+      <div id="wrapper" style="height: 10%;">
+         <!-- Header -->
+         <header id="header" class="alt">
+            <a href="index.html" class="logo"><strong>Verlan</strong> </a>
+            <nav>
+               <a href="#menu">Menu</a>
+            </nav>
+         </header>
+         <!-- Menu -->
+         <nav id="menu">
+            <ul class="links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="http://127.0.0.1:5000/adopt">Dronit</a></li>
+               <li><a href="http://127.0.0.1:5000">Brinder</a></li>
+               
+            </ul>
+
+         </nav>
+         <!-- 
+            <section id="banner" class="major">
+            	<div class="inner">
+            		<header class="major">
+            			<h1>Verlan</h1>
+            		<div class="content">
+            			<p>Add Quote Here</p>
+            			<ul class="actions">
+            				<li><a href="about us.html" class="button next scrolly">Project</a></li>
+            			</ul>
+            		</div>
+            	</div>
+            	
+            </section>-->
+         <embed class="major" src="..\static\dist - Copy\index.html" style="width: 100%; height: 400px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" >
+      </div>
+      <!-- Main -->
+      <div id="main" style="background-color:cadetblue;color: brown;">
+         {% for image, address in combined_info %}
+         <figure class="snip1527 hover">
+           <div class="image"><img src="{{ url_for('static', filename='dog_images/' + image) }}" /></div>
+           <figcaption>
+             <h3>{{ address }}</h3>
+           </figcaption>
+         </figure>
+         {% endfor %}
+         
+         <!-- partial -->
+           <script  src="../static/stat_for_grid/style.css"></script>                           
+                  
+      <embed class="major" src="..\static\dist_dog\index.html" style="width: 100%; height: 600px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" >
+      </div>
+      </section>
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+      <script src="../static/js/script.min.js"></script>
+      <!-- Footer -->
+      </div>
+      <!-- Scripts -->
+      <script src="../static/assets/js/jquery.min.js"></script>
+      <script src="../static/assets/js/jquery.scrolly.min.js"></script>
+      <script src="../static/assets/js/jquery.scrollex.min.js"></script>
+      <script src="../static/assets/js/browser.min.js"></script>
+      <script src="../static/assets/js/breakpoints.min.js"></script>
+      <script src="../static/assets/js/util.js"></script>
+      <script src="../static/assets/js/main.js"></script>
+   </body>
+</html>

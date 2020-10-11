@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Adopt</title>
+  <link rel="stylesheet" href="../static/stat_for_grid/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+{% for image, address in combined_info %}
+<figure class="snip1527 hover">
+  <div class="image"><img src="{{ url_for('static', filename='dog_images/' + image) }}" /></div>
+  <figcaption>
+    <h3>{{ address }}</h3>
+  </figcaption>
+</figure>
+{% endfor %}
+
+<!-- partial -->
+  <script  src="../static/stat_for_grid/style.css"></script>
+
+</body>
+</html>

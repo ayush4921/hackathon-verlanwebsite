@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Verlan</title>
+      <meta charset="UTF-8">
+      <title>Title</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../static/img/Untitled%20design.png">
+      <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+      <link rel="stylesheet" href="../static/fonts/font-awesome.min.css">
+      <link rel="stylesheet" href="../static/fonts/ionicons.min.css">
+      <link rel="stylesheet" href="../static/css/styles.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="../static/assets/css/main.css" />
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <script>
+         //load TrackerJS
+         !function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","//cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack");
+         //tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
+         mootrack('init', 'b6e206b005ff4b07a58266dfe17a881b');
+      </script>
+      <noscript>
+         <link rel="stylesheet" href="../static/assets/css/noscript.css" />
+      </noscript>
+   </head>
+   <body class="is-preload" style="background-color:salmon;color: whitesmoke;">
+      <div id="wrapper" style="height: 10%;">
+         <!-- Header -->
+         <header id="header" class="alt">
+            <a href="index.html" class="logo"><strong>Verlan</strong> </a>
+            <nav>
+               <a href="#menu">Menu</a>
+            </nav>
+         </header>
+         <!-- Menu -->
+         <nav id="menu">
+            <ul class="links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="http://127.0.0.1:5000/adopt">Dronit</a></li>
+               <li><a href="http://127.0.0.1:5000">Brinder</a></li>
+            </ul>
+         </nav>
+         <!-- 
+            <section id="banner" class="major">
+            	<div class="inner">
+            		<header class="major">
+            			<h1>Verlan</h1>
+            		<div class="content">
+            			<p>Add Quote Here</p>
+            			<ul class="actions">
+            				<li><a href="about us.html" class="button next scrolly">Project</a></li>
+            			</ul>
+            		</div>
+            	</div>
+            	
+            </section>-->
+         <embed class="major" src="..\static\dist\index.html" style="width: 100%; height: 400px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" >
+      </div>
+      <!-- Main -->
+      <div id="main" style="background-color:cadetblue;color: brown;">
+         {% block body %}
+         <section class="portfolio-block contact" style="background-color: rgb(169, 199, 226);color: brown;">
+            <div class="container">
+               <div class="major">
+                  <div class="sign">
+                     <style scoped>
+                        .sign {
+                        text-align: center;
+                        padding-top: -4%;
+                        font-family: Clip;
+                        src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+                        letter-spacing: 2;
+                        font-family: "Clip";
+                        text-transform: uppercase;
+                        font-size: 6em;
+                        color: #ffe6ff;
+                        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+                        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+                        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+                        }
+                     </style>
+                     {{ resultss }}
+                  </div>
+               </div>
+               <form action="/inputform" method="post" enctype=multipart/form-data>
+                  <div class="form-group">
+                     <label>Upload</label>
+                     <div class="bootstrap_img_upload">
+                        <div class="container py-5">
+                           
+                           <div class="row py-4">
+                              <div class="col-lg-6 mx-auto">
+                                 <!-- Upload image input-->
+                                 <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                                    <input id="upload" type="file" name="image" onchange="readURL(this);" class="form-control border-0">
+                                    <label id="upload-label" for="upload" class="font-weight-light text-muted"></label>
+                                    <div class="input-group-append">
+                                       <label for="upload" class="btn btn-light m-0 rounded-pill px-4 float"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                                    </div>
+                                 </div>
+                                 <!-- Uploaded image area-->
+                                 <p class="font-italic text-white text-center">The image Uploaded will be rendered inside the box below.</p>
+                                 <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group"><button class="btn btn-primary btn-block btn-lg" type="submit">Submit</button></div>
+               </form>
+            </div>
+            <embed class="major" src="..\static\dist_dog\index.html" style="width: 100%; height: 600px; margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" >
+      </div>
+      </section>
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+      <script src="../static/js/script.min.js"></script>
+      {% endblock %}
+      <!-- Footer -->
+      </div>
+      <!-- Scripts -->
+      <script src="../static/assets/js/jquery.min.js"></script>
+      <script src="../static/assets/js/jquery.scrolly.min.js"></script>
+      <script src="../static/assets/js/jquery.scrollex.min.js"></script>
+      <script src="../static/assets/js/browser.min.js"></script>
+      <script src="../static/assets/js/breakpoints.min.js"></script>
+      <script src="../static/assets/js/util.js"></script>
+      <script src="../static/assets/js/main.js"></script>
+   </body>
+</html>
